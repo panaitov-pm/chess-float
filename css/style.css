@@ -1,0 +1,153 @@
+/*
+========GLOBAL
+*/
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background-color: #EEEEEE;
+	color: #303030;
+}
+
+.container {
+	margin: 27px auto 0;
+	padding: 21px 0;
+	width: 610px;
+	height: 600px;
+	background-color: #DEC8AE;
+}
+
+.chess {
+	position: relative;
+	margin: auto;
+	width: 576px;
+	height: 576px;
+	font-size: 0;
+}
+
+.chess div {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #000;
+}
+
+.chess p {
+	width: 70px;
+	height: 70px;
+}
+
+.chess .number-area {
+	position: absolute;
+	top: 26px;
+	left: -11px;
+	border: 0;
+	font-size: 16px;
+	width: 10px;
+	color: #000;
+}
+
+.chess .letter-area {
+	font-size: 16px;
+	position: absolute;
+	top: -20px;
+	left: 31px;
+	border: 0;
+}
+
+.letter-area span {
+	display: inline-block;
+	width: 36px;
+	margin-right: 32px;
+}
+
+.chess .letter-area span:last-child {
+	margin-right: 0;
+}
+
+.a p:nth-child(even),
+.c p:nth-child(even),
+.e p:nth-child(even),
+.g p:nth-child(even){
+	background-color: black;
+}
+
+.b p:nth-child(odd),
+.d p:nth-child(odd),
+.f p:nth-child(odd),
+.h p:nth-child(odd){
+	background-color: black;
+}
+
+/* BLACK CHECKERS */
+
+.row-1 {
+	position: absolute;
+	top: 7px;
+	left: 80px;
+}
+
+.row-2 {
+	position: absolute;
+	top: 78px;
+	left: 8px;
+}
+
+.row-3 {
+	position: absolute;
+	top: 149px;
+	left: 80px;
+}
+
+/* WHITE CHECKERS*/
+.row-8 {
+	position: absolute;
+	bottom: 21px;
+	left: 8px;
+}
+
+.row-7 {
+	position: absolute;
+	bottom: 93px;
+	left: 80px;
+}
+
+.row-6 {
+	position: absolute;
+	bottom: 162px;
+	left: 8px;
+}
+
+.checker {
+	float: left;
+	margin-right: 89px;
+}
+
+.checker:last-child {
+	margin-right: 0;
+}
+
+.black,
+.white {
+	width: 55px;
+	height: 55px;
+	border: 2px solid #999;
+	border-radius: 50%;
+}
+
+.black {
+	background-color: black;
+	-webkit-box-shadow: 0 0 0 1px white;
+	box-shadow: 0 0 0 1px white;
+}
+
+.white {
+	background-color: #B9292B;
+	-webkit-box-shadow: 0 0 0 1px #ccc;
+	box-shadow: 0 0 0 1px #ccc;
+}
+
