@@ -1,6 +1,6 @@
-/*
-========GLOBAL
-*/
+/* -----------------------------------------
+ GLOBAL
+----------------------------------------- */
 html,
 body {
 	min-height: 100%;
@@ -14,48 +14,55 @@ body {
 	color: #303030;
 }
 
+/* -----------------------------------------
+ CONTAINER
+----------------------------------------- */
 .container {
 	margin: 27px auto 0;
 	padding: 21px 0;
-	width: 610px;
-	height: 600px;
+	width: 615px;
+	height: 615px;
 	background-color: #DEC8AE;
 }
 
+/* -----------------------------------------
+ CHESS
+----------------------------------------- */
 .chess {
 	position: relative;
 	margin: auto;
-	width: 576px;
-	height: 576px;
+	width: 578px;
+	height: 578px;
+	border: 1px solid #000;
 	font-size: 0;
 }
 
-.chess div {
-	display: inline-block;
-	vertical-align: top;
-	border: 1px solid #000;
+.cell {
+	float: left;
+	width: 72px;
+	height: 72px;
 }
 
-.chess p {
-	width: 70px;
-	height: 70px;
-}
-
-.chess .number-area {
+.number-area {
 	position: absolute;
 	top: 26px;
 	left: -11px;
+	width: 10px;
+	height: 72px;
 	border: 0;
 	font-size: 16px;
-	width: 10px;
 	color: #000;
 }
 
-.chess .letter-area {
-	font-size: 16px;
+.number-area p {
+	height: 72px;
+}
+
+.letter-area {
 	position: absolute;
 	top: -20px;
 	left: 31px;
+	font-size: 16px;
 	border: 0;
 }
 
@@ -69,22 +76,60 @@ body {
 	margin-right: 0;
 }
 
-.a p:nth-child(even),
-.c p:nth-child(even),
-.e p:nth-child(even),
-.g p:nth-child(even){
+/* -----------------------------------------
+ CELLS COLORS
+----------------------------------------- */
+.cell:nth-child(even) {
 	background-color: black;
+}
+.cell:nth-child(odd) {
+	background-color: white;
+}
+.cell:nth-child(n+9):nth-child(odd) {
+	background-color: black;
+}
+.cell:nth-child(n+9):nth-child(even) {
+	background-color: white;
+}
+.cell:nth-child(n+17):nth-child(even) {
+	background-color: black;
+}
+.cell:nth-child(n+17):nth-child(odd) {
+	background-color: white;
+}
+.cell:nth-child(n+25):nth-child(odd) {
+	background-color: black;
+}
+.cell:nth-child(n+25):nth-child(even) {
+	background-color: white;
+}
+.cell:nth-child(n+33):nth-child(even) {
+	background-color: black;
+}
+.cell:nth-child(n+33):nth-child(odd) {
+	background-color: white;
+}
+.cell:nth-child(n+41):nth-child(odd) {
+	background-color: black;
+}
+.cell:nth-child(n+41):nth-child(even) {
+	background-color: white;
+}
+.cell:nth-child(n+49):nth-child(even) {
+	background-color: black;
+}
+.cell:nth-child(n+49):nth-child(odd) {
+	background-color: white;
+}
+.cell:nth-child(n+57):nth-child(odd) {
+	background-color: black;
+}
+.cell:nth-child(n+57):nth-child(even) {
+	background-color: white;
 }
 
-.b p:nth-child(odd),
-.d p:nth-child(odd),
-.f p:nth-child(odd),
-.h p:nth-child(odd){
-	background-color: black;
-}
 
 /* BLACK CHECKERS */
-
 .row-1 {
 	position: absolute;
 	top: 7px;
@@ -103,23 +148,23 @@ body {
 	left: 80px;
 }
 
-/* WHITE CHECKERS*/
+/* WHITE CHECKERS */
 .row-8 {
 	position: absolute;
-	bottom: 21px;
-	left: 8px;
+	bottom: 8px;
+	left: 9px;
 }
 
 .row-7 {
 	position: absolute;
-	bottom: 93px;
-	left: 80px;
+	bottom: 81px;
+	left: 81px;
 }
 
 .row-6 {
 	position: absolute;
-	bottom: 162px;
-	left: 8px;
+	bottom: 153px;
+	left: 9px;
 }
 
 .checker {
